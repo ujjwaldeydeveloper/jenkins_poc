@@ -7,7 +7,7 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Dependency added') {
+        stage('Pre-Build') {
             steps {
                 withEnv([]) {
                     sh 'flutter pub get'
@@ -19,6 +19,11 @@ pipeline {
                 withEnv([]) {
                     sh 'flutter build apk'
                 }
+            }
+        }
+        stage('ArchieveApkAndroid') {
+            steps {
+                archiveArtifacts artifacts: '/build/app/outputs/flutter-apk/app-release.apk', fingerprint: true,  onlyIfSucessful: true
             }
         }
     }
