@@ -1,0 +1,4 @@
+#Sat May 11 15:39:08 IST 2024
+base.0=/Users/ujjwal/AndroidStudioProjects/jenkins_poc/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
