@@ -23,7 +23,7 @@ pipeline {
         }
         stage('ArchieveApkAndroid') {
             steps {
-                archiveArtifacts artifacts: '/build/app/outputs/flutter-apk/app-release.apk', fingerprint: true,  onlyIfSucessful: true
+                archiveArtifacts artifacts: '/build/app/outputs/flutter-apk/app-release.apk', fingerprint: true, onlyIfSuccessful: true
             }
         }
     }
